@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div id="logo">
+  <img src="images\Logo\Bikes and Bridges-JPG.jpg" style="width: 10%";>
+</div>
+<li><a href="menu.html">Back to Menu</a></li>
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<h2>Solutions: A Better Future For Pedestrians</h2>
+
+<button class="accordion">Lower Speed Limits</button>
+<div class="panel">
+  <h2>Lower Speed Limits</h2>
+  <p>Studies by the Seattle Department of Transit have shown that lowering speed limits, even a little bit, can save lives.</p>
+  <img src="images\Informational\SpeedLimit.jpg" style="width: 100%";>
+  <h2>Speed Limits aren't being obeyed? Traffic Calming, Explained</h2>
+    <p>Even with enforcement, getting drivers to obey posted safe speeds can be difficult. Road design can help both slow down drivers and make it safer for all.</h2>
+  <img src="images\Informational\TrafficCalming1.jpg" style="width: 100%";>
+</div>
+
+<button class="accordion">Improve Public Transit: A Walkable "last mile"</button>
+<div class="panel">
+<h2>Better Public Transit Means More Walkers and Fewer Cars</h2>
+  <p>Getting Pittsburghers within a couple blocks of their destination is key for taking cars off the road, and getting more feet on the ground. Expanded routes to all ends of the city and suburbs is important, but the key factor is frequency and reliabillity. Public transit routes needs to be reliable and frequent enough that riders shouldn't ever have to check a bus or train schedule.</p>
+  <img src="images\Informational\Bus.jpg" style="width: 100%";>
+</div>
+
+<button class="accordion">Raised Pedestrian Crossings & No "Turn On Red"</button>
+<div class="panel">
+  <h2>Making Car-Human interactions safer</h2>
+  <p>When you cross a street in Pittsburgh, you're most likely stepping into the street. Instead of people encroaching on car space, which is dangerous, why not make cars come into pedestrian space?</p>
+    <img src="images\Informational\Raised.jpg" style="width: 30%";>
+  <p>This approach gives right-of-way to people, rather than machines. Besides the natural "speed bump" effect, it forces drivers to pay more attention. It puts the onus of safety onto the driver rather than the pedestrians who are at a much bigger risk.</p>
+  <h2>Protecting the Crosswalk: Universal No Turn On red</h2>
+  <p>So called "Turn On Red" laws allow drivers to bypass traffic signals and cross paths with pedestrians despite them having the right-of-way. This is incredibly dangerous, especially when combined with agressive drivers. Intersections with "Right On Red" rules result in aproximatley 23% more crashes involving pedestrians!</p>
+  <img src="images\Informational\RightOnRed.png" style="width: 75%";>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
